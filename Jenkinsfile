@@ -11,8 +11,7 @@ node {
     }
 
     stage('Build') {
-        def nodeVersion = '12'
-        withNodeJS(version: nodeVersion) {
+        nodejs(nodeJSInstallationName: 'nodejs12') {
             sh 'npm ci'
             sh 'npm run build'
         }
