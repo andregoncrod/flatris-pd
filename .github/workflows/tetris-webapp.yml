@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-      - run: npm build
+      - run: npm run build
       - uses: actions/upload-artifact@v3
         if: github.event_name != 'pull_request'
         with:
