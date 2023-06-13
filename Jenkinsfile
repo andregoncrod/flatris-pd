@@ -13,9 +13,10 @@ node {
         sh 'cp .env.example.js .env.js'
     }
 
-    stage('Build') {
+    stage('Test / Build') {
         nodejs(nodeJSInstallationName: 'nodejs12') {
             sh 'npm ci'
+            sh 'npm test'
             sh 'npm run build'
         }
     }
