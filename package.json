@@ -5,7 +5,7 @@
   "description": "A fast-paced two-player web game",
   "repository": {
     "type": "git",
-    "url": "https://github.com/skidding/flatris.git"
+    "url": "https://github.com/andregoncrod/flatris-pd"
   },
   "scripts": {
     "format": "prettier --write '**/*.{js,css}' '!**/{flow-typed,.next}/**'",
