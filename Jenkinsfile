@@ -1,6 +1,6 @@
 node {
+    def commit_id
     stage('Checkout') {
-        def commit_id
         checkout(
             [$class: 'GitSCM', 
             branches: [[name: 'master']], 
