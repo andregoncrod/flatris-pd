@@ -1,4 +1,4 @@
-name: ci
+name: WebApp
 on:
   push:
     branches: [ main ]
