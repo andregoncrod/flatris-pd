@@ -1,13 +1,15 @@
 pipeline {
     stages {
         stage('Checkout') {
-            checkout(
-                [$class: 'GitSCM', branches: [[name: '*/master']], 
-                doGenerateSubmoduleConfigurations: false, 
-                extensions: [], 
-                submoduleCfg: [], 
-                userRemoteConfigs: [[url: 'https://github.com/andregoncrod/flatris-pd']]]
-            ) 
+            steps {
+                checkout(
+                    [$class: 'GitSCM', branches: [[name: '*/master']], 
+                    doGenerateSubmoduleConfigurations: false, 
+                    extensions: [], 
+                    submoduleCfg: [], 
+                    userRemoteConfigs: [[url: 'https://github.com/andregoncrod/flatris-pd']]]
+                ) 
+            }
         }
 
         stage('Copy and rename env file') {
