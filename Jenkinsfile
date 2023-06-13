@@ -18,6 +18,6 @@ node {
     }
 
     stage('Upload Artifact') {
-        archiveArtifacts artifacts: 'web/.next', fingerprint: true
+        archiveArtifacts artifacts: 'web/.next/**/*', fingerprint: true
     }
 }
